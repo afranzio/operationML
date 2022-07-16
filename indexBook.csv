@@ -1,5 +1,18 @@
 ﻿IndexId,IndexName
-NSEI,Nifty 50
-NSEBANK,Nifty Bank
-NIFTYAUTO,Nifty Auto
-NIPHARM,Nifty Pharma
+nifty 50,nifty 50
+nifty bank,nifty bank
+nifty auto,nifty auto
+nifty pharma,nifty pharma
+nifty psu bank,nifty psu bank
+nifty realty,nifty realty
+nifty fmcg,nifty fmcg
+nifty media,nifty media
+nifty it,nifty it
+nifty metal,nifty metal
+nifty infrastructure,nifty infrastructure
+nifty energy,nifty energy
+nifty financial services,nifty financial services
+NIFTY Midcap 100,NIFTY Midcap 100
+Nifty Services Sector,Nifty Services Sector
+Nifty India Consumption,Nifty India Consumption
+india vix,indiA VIX
