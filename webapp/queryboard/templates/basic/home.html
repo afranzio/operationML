@@ -26,13 +26,40 @@
         </nav>
     </section>
     <section class="container">
-        <label for="options">Choose a option:</label>
-        <select class="form-select" aria-label="Default select example" name="options" id="options">
-            {% for each in optionList %}
-            <option value="{{each}}">{{each}}</option>
-            {% endfor %}
-        </select>
+        <div class="d-flex">
+            <div>
+                <select class="form-select" aria-label="Default select options" name="options01" id="options01" onchange="detectChange(this)" >
+                    <option value="number01">Number</option>
+                    {% for each in optionList %}
+                    <option value="{{each}}">{{each}}</option>
+                    {% endfor %}
+                </select>
+                <input type="number" id="number01" style="display:none" />
+            </div>
+            <div>
+                <select class="form-select" aria-label="Default select operator" name="operator" id="operator">
+                    {% for operator in operators %}
+                    <option value="{{operator}}">{{operator}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <select class="form-select" aria-label="Default select options02" name="options02" id="options02" onchange="detectChange(this)" >
+                    <option value="number02">Number</option>
+                    {% for each in optionList %}
+                    <option value="{{each}}">{{each}}</option>
+                    {% endfor %}
+                </select>
+                <input type="number" id="number02" style="display:none" />
+            </div>
+        </div>
     </section>
 </body>
-
+    <script>
+        function detectChange(selectOS) {
+            if(selectOS.value == 'number01' || selectOS.value == 'number02'){
+                document.getElementById(selectOS.value).style.display = 'block';
+            }
+        }
+    </script>
 </html>

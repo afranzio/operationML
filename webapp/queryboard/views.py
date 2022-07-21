@@ -8,9 +8,10 @@ import pandas as pd
 def home(request):
     df = pd.read_csv ('D:\\CodeCode\\Afranzio-Sunday\\vivekML\\stocks\\BRTI.csv', index_col=False)
     option_list = []
+    operator_list = ["+", "-", "*", "/", "Equals", "Not Equals", "Greater Than", "Less Than", "GreaterThanequal", "Lessthan equal", "Crossed Above", "Crossed below"]
     for column in df.columns:
         if column != 'Date' and 'Unnamed:' not in column:
             separator_space = column.replace('_', ' ')
             option_title = separator_space.capitalize()
             option_list.append(option_title)
-    return render(request, 'basic/home.html', {'optionList': option_list})
+    return render(request, 'basic/home.html', {'optionList': option_list, 'operators': operator_list})
